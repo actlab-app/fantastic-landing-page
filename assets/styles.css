@@ -198,6 +198,7 @@
   }
 
   .brand-mark{
+    --logo-curl-size: clamp(3.2rem, 7vw, 5.8rem);
     position:absolute;
     top:0;
     left:0;
@@ -206,8 +207,38 @@
     align-items:center;
     justify-content:center;
     max-width: min(22rem, 72vw);
+    filter: drop-shadow(0 14px 24px rgba(0,0,0,.28));
+  }
+  .brand-mark::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:var(--logo-curl-size);
+    height:var(--logo-curl-size);
+    background:
+      linear-gradient(135deg, #fff7df 0%, #eee0bd 46%, #a78e5c 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: drop-shadow(8px 8px 9px rgba(34,20,8,.32));
+    pointer-events:none;
+    z-index:3;
+  }
+  .brand-mark::after{
+    content:"";
+    position:absolute;
+    top:calc(var(--logo-curl-size) * .48);
+    left:calc(var(--logo-curl-size) * -.12);
+    width:calc(var(--logo-curl-size) * 1.35);
+    height:2px;
+    background:linear-gradient(90deg, transparent, rgba(55,35,14,.42), transparent);
+    transform:rotate(-45deg);
+    transform-origin:center;
+    pointer-events:none;
+    z-index:4;
   }
   .brand-mark img{
+    position:relative;
+    z-index:1;
     display:block;
     padding: 16px 20px 18px 16px;
     width: min(18rem, 64vw);
@@ -218,6 +249,9 @@
     border-radius: 0 0 50px 0;
     border: 2px dashed black;
     outline: 5px solid rgb(54, 54, 54);
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,.75),
+      inset 18px 18px 26px rgba(0,0,0,.06);
   }
   .eyebrow{
     letter-spacing:.26em; font-size:.82rem; margin: 0;
@@ -358,6 +392,9 @@
   }
 
   @media (max-width: 640px){
+    .brand-mark{
+      --logo-curl-size: clamp(2.4rem, 12vw, 3.4rem);
+    }
     .hero-content{
       padding-inline: 1rem;
     }
