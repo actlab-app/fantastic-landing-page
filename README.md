@@ -22,7 +22,7 @@ ACTLab.app icin hazirlanan, katmanli fantastik sahne animasyonuna sahip statik l
 │   ├── styles.css
 │   └── main.js
 └── img/
-    ├── actlogo.png
+    ├── actlogo.webp
     ├── explorer-act.webp
     ├── bg_imgs/
     │   ├── 1080p/

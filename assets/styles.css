@@ -198,20 +198,26 @@
   }
 
   .brand-mark{
-    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
-    max-width: min(26rem, 78vw);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:30;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    max-width: min(22rem, 72vw);
   }
   .brand-mark img{
     display:block;
-    width: min(24rem, 78vw);
-    max-height: 20svh;
+    padding: 16px 20px 18px 16px;
+    width: min(18rem, 64vw);
+    max-height: 18svh;
     height:auto;
     object-fit:contain;
-    filter: 
-    drop-shadow(1px 0 0 rgba(255,255,255,.78)) 
-    drop-shadow(-1px 0 0 rgba(255,255,255,.78)) 
-    drop-shadow(0 1px 0 rgba(255,255,255,.78)) 
-    drop-shadow(0 -1px 0 rgba(255,255,255,.78));
+    background-color: white;
+    border-radius: 0 0 50px 0;
+    border: 2px dashed black;
+    outline: 5px solid rgb(54, 54, 54);
   }
   .eyebrow{
     letter-spacing:.26em; font-size:.82rem; margin: 0;
@@ -377,7 +383,7 @@
       gap: .55rem;
     }
     .brand-mark img{
-      width: min(19rem, 64vw);
+      width: min(16rem, 54vw);
       max-height: 16svh;
     }
     h1.headline{
@@ -407,7 +413,7 @@
       gap: .38rem;
     }
     .brand-mark img{
-      width: min(15rem, 52vw);
+      width: min(13rem, 46vw);
       max-height: 13svh;
     }
     h1.headline{
