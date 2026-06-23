@@ -664,8 +664,14 @@ h2.headline {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (orientation: portrait) {
   .dial-panel {
+    backdrop-filter: none;
+  }
+  .hero-content::before {
+    filter: none;
+  }
+  .scroll-hint span {
     backdrop-filter: none;
   }
 }

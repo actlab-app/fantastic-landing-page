@@ -77,24 +77,46 @@
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
       <picture class="hero-layer hero-sky hero-pan-reverse">
+        <source media="(max-width: 760px)" type="image/webp"
+          srcset="img/bg_imgs/1080p/genis_fantastik_arkaplan.webp">
+        <source media="(orientation: portrait)" type="image/webp" srcset="
+            img/bg_imgs/1080p/genis_fantastik_arkaplan.webp 1920w,
+            img/bg_imgs/2k/genis_fantastik_arkaplan.webp 2560w
+          " sizes="140vw">
         <source type="image/webp" srcset="
             img/bg_imgs/1080p/genis_fantastik_arkaplan.webp 1920w,
             img/bg_imgs/2k/genis_fantastik_arkaplan.webp 2560w,
             img/bg_imgs/4k/genis_fantastik_arkaplan.webp 3840w,
             img/bg_imgs/genis_fantastik_arkaplan.webp 4830w
-          " sizes="(orientation: portrait) 210vh, 180vw">
+          " sizes="180vw">
         <img class="hero-layer-img" src="img/bg_imgs/genis_fantastik_arkaplan.webp" alt="" decoding="async"
           fetchpriority="high">
       </picture>
-      <img class="zeppelin" src="img/bg_imgs/zeppelin.webp" alt="" decoding="async">
-      <img class="zeppelin3" src="img/zeppelin3.webp" alt="" decoding="async">
+      <picture>
+        <source media="(min-width: 761px) and (orientation: landscape)" type="image/webp"
+          srcset="img/bg_imgs/zeppelin.webp">
+        <img class="zeppelin" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""
+          decoding="async">
+      </picture>
+      <picture>
+        <source media="(min-width: 761px) and (orientation: landscape)" type="image/webp"
+          srcset="img/zeppelin3.webp">
+        <img class="zeppelin3" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt=""
+          decoding="async">
+      </picture>
       <picture class="hero-layer hero-foreground hero-pan-forward">
+        <source media="(max-width: 760px)" type="image/webp"
+          srcset="img/bg_imgs/1080p/genis_fantastik_onplan.webp">
+        <source media="(orientation: portrait)" type="image/webp" srcset="
+            img/bg_imgs/1080p/genis_fantastik_onplan.webp 1920w,
+            img/bg_imgs/2k/genis_fantastik_onplan.webp 2560w
+          " sizes="140vw">
         <source type="image/webp" srcset="
             img/bg_imgs/1080p/genis_fantastik_onplan.webp 1920w,
             img/bg_imgs/2k/genis_fantastik_onplan.webp 2560w,
             img/bg_imgs/4k/genis_fantastik_onplan.webp 3840w,
             img/bg_imgs/genis_fantastik_onplan.webp 4830w
-          " sizes="(orientation: portrait) 210vh, 180vw">
+          " sizes="180vw">
         <img class="hero-layer-img" src="img/bg_imgs/genis_fantastik_onplan.webp" alt="" decoding="async"
           fetchpriority="high">
       </picture>
@@ -167,12 +189,18 @@
       <div class="hero-frontmost" aria-hidden="true">
         <div class="hero-frontmost-plane">
           <picture>
+            <source media="(max-width: 760px)" type="image/webp"
+              srcset="img/bg_imgs/1080p/genis_fantastik_en_onplan.webp">
+            <source media="(orientation: portrait)" type="image/webp" srcset="
+                img/bg_imgs/1080p/genis_fantastik_en_onplan.webp 1920w,
+                img/bg_imgs/2k/genis_fantastik_en_onplan.webp 2560w
+              " sizes="140vw">
             <source type="image/webp" srcset="
                 img/bg_imgs/1080p/genis_fantastik_en_onplan.webp 1920w,
                 img/bg_imgs/2k/genis_fantastik_en_onplan.webp 2560w,
                 img/bg_imgs/4k/genis_fantastik_en_onplan.webp 3840w,
                 img/bg_imgs/genis_fantastik_en_onplan.webp 4830w
-              " sizes="(orientation: portrait) 210vh, 180vw">
+              " sizes="180vw">
             <img class="hero-layer-img" src="img/bg_imgs/genis_fantastik_en_onplan.webp" alt="" decoding="async">
           </picture>
           <img class="hero-explorer" src="img/explorer-act.webp" alt="" decoding="async">
