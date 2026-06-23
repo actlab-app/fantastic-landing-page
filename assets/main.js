@@ -1,6 +1,3 @@
-// =====================================================================
-  // 1) GERİ SAYIM — açılış tarihini buradan değiştirebilirsiniz
-  // =====================================================================
   const LAUNCH_DATE = new Date('2026-09-15T00:00:00+03:00');
 
   function pad(n){ return String(n).padStart(2, '0'); }
@@ -26,26 +23,18 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // =====================================================================
-  // 2) HERO BACKGROUND PAN - scroll ile gorseli tepeden alta kaydir
-  // =====================================================================
   const hero = document.querySelector('.hero');
   const newsletterSection = document.querySelector('.newsletter-section');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroEase = 0.035;
   const heroImageAspect = 4830 / 2400;
   let heroBaseLayerWidth = 0;
-  // Zoom-out sonunda goruntu ne kadar kuculsun? 0.82 = %18 zoom-out.
+
   const maxZoomOut = 0.78;
-  // Newsletter kartinin ne kadar erken yukari cikacagini buradan ayarla.
-  // 0.00 = arka plan animasyonu biter bitmez baslar, 0.35 = daha gec baslar.
   const newsletterStart = 0.2;
   const contentExitDistance = 120;
-  // Content cikisinin scroll suresi. 0.45 = viewport'un %45'i kadar kisa bir faz.
   const contentExitScrollRatio = 0.42;
-  // Zoom-out fazinin scroll suresi. Daha kucuk deger sonraki faza daha cabuk gecirir.
   const zoomOutScrollRatio = 0.48;
-  // Form reveal fazinin scroll suresi. Daha kucuk deger zoom sonrasi formu daha cabuk getirir.
   const newsletterRevealScrollRatio = 0.48;
   const lightModeQuery = window.matchMedia('(max-width: 760px), (orientation: portrait)');
   let targetHeroProgress = 0;
@@ -220,14 +209,6 @@
     });
   });
 
-  // =====================================================================
-  // 2) BULUT PARALAKSI — fare hareketine göre bulut katmanlarını kaydır
-  // =====================================================================
-  // =====================================================================
-  // 3) BÜLTEN FORMU — şu an sadece arayüz; gerçek kayıt için kendi e-posta
-  //    servisinizin (Mailchimp, ConvertKit, kendi API'niz vb.) endpoint'ine
-  //    bir fetch() isteği eklemeniz gerekir.
-  // =====================================================================
   const form = document.getElementById('newsletterForm');
   const note = document.getElementById('formNote');
 
@@ -241,9 +222,6 @@
       note.classList.add('is-error');
       return;
     }
-
-    // TODO: gerçek kayıt isteği buraya — örn:
-    // fetch('https://senin-servisin.com/subscribe', { method:'POST', body: JSON.stringify({ email }) })
 
     note.classList.remove('is-error');
     note.textContent = 'Teşekkürler, kâşif! Kapılar açılınca ilk sen haber alacaksın.';
