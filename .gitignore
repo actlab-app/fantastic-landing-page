@@ -1,0 +1,19 @@
+# Local source/design files
+psdler/
+*.psd
+*.psb
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary screenshots/logs
+tmp-*.png
+*.log
